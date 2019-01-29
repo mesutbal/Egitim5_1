@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { DrawerActions } from 'react-navigation';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 export default class MainScreen extends React.Component {
@@ -12,6 +13,7 @@ export default class MainScreen extends React.Component {
                     size={40}
                     backgroundColor="transparent"
                     color="gray"
+                    onPress={() => { this.props.navigation.dispatch(DrawerActions.openDrawer()); }}
                 />
             </View>
         </View>);

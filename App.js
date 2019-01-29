@@ -10,7 +10,8 @@ const Drawer = createDrawerNavigator({
   },
   {
     contentComponent: SideMenu,
-    drawerWidth: Dimensions.get('window').width
+    drawerWidth: Dimensions.get('window').width,
+    drawerPosition: 'right'
   }
 );
 
