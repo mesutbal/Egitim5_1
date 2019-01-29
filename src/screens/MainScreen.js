@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { DrawerActions } from 'react-navigation';
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -16,6 +16,7 @@ export default class MainScreen extends React.Component {
                     onPress={() => { this.props.navigation.dispatch(DrawerActions.openDrawer()); }}
                 />
             </View>
+            <Text style={styles.textStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere erat ut ante iaculis, nec vestibulum orci efficitur. Vestibulum ac ante eu leo mattis sagittis vitae at enim. Quisque sed velit id erat mattis rhoncus. Duis et rutrum mauris. Sed sit amet vestibulum velit. Proin eu justo ultrices, porta augue nec, venenatis lacus. Duis faucibus tincidunt justo a bibendum. Pellentesque tempus neque vitae arcu tempus egestas. Integer sit amet bibendum odio. Mauris ullamcorper, nisl eget auctor dictum, erat ante mollis ipsum, ultrices ultricies lacus nibh sed odio.</Text>
         </View>);
     }
 }
@@ -29,5 +30,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 20,
         top: 10
+    },
+    textStyle: {
+        fontSize: 20
     }
 });
