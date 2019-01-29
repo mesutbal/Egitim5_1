@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         top: 10
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'micnrwb'
     }
 });
