@@ -15,5 +15,5 @@ const Drawer = createDrawerNavigator({
 );
 
 const App = createAppContainer(Drawer);
-
+  
 export default App;
