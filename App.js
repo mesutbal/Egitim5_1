@@ -1,3 +1,4 @@
+import React from 'react';
 import { Dimensions } from 'react-native';
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 import MainScreen from './src/screens/MainScreen';
@@ -18,10 +19,11 @@ const App = createAppContainer(Drawer);
   
 export default App;
 
+/*const mainScreen = ({ navigation }) => (<MainScreen navigationRight={navigation} />);
 
-/*const DrawerRight = createDrawerNavigator({
+const DrawerRight = createDrawerNavigator({
   Home: {
-    screen: MainScreen
+    screen: mainScreen
   }
 },
 {
@@ -32,15 +34,17 @@ export default App;
 );
 
 const DrawerLeft = createDrawerNavigator({
-Home: {
-  screen: DrawerRight
-}
+  Home: {
+    screen: (DrawerRight)
+  }
 },
 {
-contentComponent: SideMenu,
-drawerWidth: Dimensions.get('window').width,
-drawerPosition: 'left'
+  contentComponent: SideMenu,
+  drawerWidth: Dimensions.get('window').width,
+  drawerPosition: 'left'
 }
 );
 
-const App = createAppContainer(DrawerLeft);*/
+const App = createAppContainer(DrawerLeft);
+
+export default App;*/
