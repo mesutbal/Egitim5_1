@@ -5,6 +5,7 @@ import MainScreen from './src/screens/MainScreen';
 import SideMenu from './src/screens/SideMenu';
 import SecondScreen from './src/screens/SecondScreen';
 import TabsMainScreen from './src/screens/Tabs/TabsMainScreen';
+import StackScreen from './src/screens/NBar/StackScreen';
 
 
 const Drawer = createDrawerNavigator({
@@ -16,11 +17,14 @@ const Drawer = createDrawerNavigator({
     },
     Tabs: {
       screen: TabsMainScreen
+    },
+    Nbar: {
+      screen: StackScreen
     }
   },
   {
     contentComponent: SideMenu,
-    drawerWidth: Dimensions.get('window').width
+    drawerWidth: Dimensions.get('window').width * 0.8
   }
 );
 

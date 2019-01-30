@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, StyleSheet, TouchableOpacity, Text, Platform } from 'react-native';
+import { View, ScrollView, StyleSheet, TouchableOpacity, Text, TouchableHighlight } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 export default class SideMenu extends React.Component {
@@ -33,9 +33,9 @@ export default class SideMenu extends React.Component {
                 <TouchableOpacity style={styles.opacityStyle}>
                     <Text style={styles.textStyle}>Menu 1</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.setState({ menuDetay2: !this.state.menuDetay2 }); }}>
+                <TouchableHighlight style={styles.opacityStyle} onPress={() => { this.setState({ menuDetay2: !this.state.menuDetay2 }); }}>
                     <Text style={styles.textStyle}>Menu 2</Text>
-                </TouchableOpacity>
+                </TouchableHighlight>
                 { this.renderMenuDetay2() }
                 <TouchableOpacity style={styles.opacityStyle}>
                     <Text style={styles.textStyle}>Menu 3</Text>
@@ -43,8 +43,8 @@ export default class SideMenu extends React.Component {
                 <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('Tabs'); }}>
                     <Text style={styles.textStyle}>Tabs</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.opacityStyle}>
-                    <Text style={styles.textStyle}>Menu 5</Text>
+                <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('Nbar'); }}>
+                    <Text style={styles.textStyle}>NavigationBar</Text>
                 </TouchableOpacity>
             </ScrollView>
         </View>);
