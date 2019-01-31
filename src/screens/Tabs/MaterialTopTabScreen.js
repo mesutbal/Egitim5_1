@@ -5,11 +5,12 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+import StackScreen from '../NBar/StackScreen';
 
 const MaterialTopTabScreen = createMaterialTopTabNavigator(
     {
         Tab1: { 
-            screen: Page1,
+            screen: StackScreen,
             navigationOptions: {
                 title: 'Sayfa 1',
                 tabBarIcon: () => (<Entypo 
@@ -58,6 +59,7 @@ const MaterialTopTabScreen = createMaterialTopTabNavigator(
         barStyle: {
             backgroundColor: 'yellow'
         }*/
+        tabBarPosition: 'bottom',
         swipeEnabled: false,
         lazy: true
     });
