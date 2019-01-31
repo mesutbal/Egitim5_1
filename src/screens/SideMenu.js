@@ -37,8 +37,8 @@ export default class SideMenu extends React.Component {
                     <Text style={styles.textStyle}>Menu 2</Text>
                 </TouchableHighlight>
                 { this.renderMenuDetay2() }
-                <TouchableOpacity style={styles.opacityStyle}>
-                    <Text style={styles.textStyle}>Menu 3</Text>
+                <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('Switch'); }}>
+                    <Text style={styles.textStyle}>Switch</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('Tabs'); }}>
                     <Text style={styles.textStyle}>Tabs</Text>
