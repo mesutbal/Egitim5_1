@@ -46,6 +46,9 @@ export default class SideMenu extends React.Component {
                 <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('MaterialBottom'); }}>
                     <Text style={styles.textStyle}>Material Bottom Tabs</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('MaterialTop'); }}>
+                    <Text style={styles.textStyle}>Material Top Tabs</Text>
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.opacityStyle} onPress={() => { this.navigateToScreen('Nbar'); }}>
                     <Text style={styles.textStyle}>NavigationBar</Text>
                 </TouchableOpacity>

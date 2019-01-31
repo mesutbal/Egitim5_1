@@ -1,12 +1,12 @@
 import React from 'react';
 import { Alert } from 'react-native';
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import { createMaterialTopTabNavigator } from 'react-navigation';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
-import Entypo from 'react-native-vector-icons/Entypo';
 
-const MaterialBottomTabScreen = createMaterialBottomTabNavigator(
+const MaterialTopTabScreen = createMaterialTopTabNavigator(
     {
         Tab1: { 
             screen: Page1,
@@ -51,13 +51,15 @@ const MaterialBottomTabScreen = createMaterialBottomTabNavigator(
         }
     }, 
     {
-        initialRouteName: 'Tab1',
+        /*initialRouteName: 'Tab1',
         backBehavior: 'initialRoute',
         activeColor: 'red',
         inactiveColor: 'blue',
         barStyle: {
             backgroundColor: 'yellow'
-        }
+        }*/
+        swipeEnabled: false,
+        lazy: true
     });
 
-export default MaterialBottomTabScreen;
+export default MaterialTopTabScreen;

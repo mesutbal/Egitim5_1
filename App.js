@@ -8,6 +8,7 @@ import TabsMainScreen from './src/screens/Tabs/TabsMainScreen';
 import StackScreen from './src/screens/NBar/StackScreen';
 import SwitchNavigatorScreen from './src/screens/Switch/SwitchNavigatorScreen';
 import MaterialBottomTabScreen from './src/screens/Tabs/MaterialBottomTabScreen';
+import MaterialTopTabScreen from './src/screens/Tabs/MaterialTopTabScreen';
 
 
 const Drawer = createDrawerNavigator({
@@ -28,6 +29,9 @@ const Drawer = createDrawerNavigator({
     },
     MaterialBottom: {
       screen: MaterialBottomTabScreen
+    },
+    MaterialTop: {
+      screen: MaterialTopTabScreen
     }
   },
   {
