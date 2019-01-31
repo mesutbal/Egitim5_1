@@ -4,7 +4,7 @@ import { View, Text, Alert } from 'react-native';
 export default class Page2 extends React.Component {
 
     componentWillMount() {
-        Alert.alert('ecd', 'ecd');
+        //Alert.alert('ecd', 'ecd');
     }
 
     render() {

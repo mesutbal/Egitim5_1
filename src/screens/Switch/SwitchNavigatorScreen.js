@@ -13,7 +13,8 @@ const SwitchNavigatorScreen = createSwitchNavigator({
         screen: ({ navigation }) => (<Page navigation={navigation}>Sayfa 2</Page>)
     },  
 }, { 
-    initialRouteName: 'Sayfa1'
+    initialRouteName: 'Sayfa1',
+    backBehavior: 'initialRoute'
 });
 
 export default SwitchNavigatorScreen;

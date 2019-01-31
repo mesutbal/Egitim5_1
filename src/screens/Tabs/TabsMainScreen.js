@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity, Text, Alert } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
@@ -21,7 +21,7 @@ const TabsMainScreen = createBottomTabNavigator(
                 tabBarIcon: () => (<Entypo 
                     name="app-store"
                     size={25}
-                />)
+                />) 
             }
         },
         Tab2: 
@@ -32,7 +32,16 @@ const TabsMainScreen = createBottomTabNavigator(
                 tabBarIcon: () => (<Entypo 
                     name="attachment"
                     size={25}
-                />)
+                />),
+                //tabBarVisible: false,
+                //tabBarLabel: 'Eklenti',
+                //tabBarButtonComponent: () => (<TouchableOpacity><Text>Facebook</Text></TouchableOpacity>)
+                //tabBarAccesibilityLabel: 'This is an attachment'
+                tabBarOnPress: ({ navigation, defaultHandler }) => {
+                    //console.log(navigation.state);
+                    Alert.alert('React Native Eğitim', `${navigation.state.routeName} Tıklandı`);
+                    defaultHandler();
+                }
             }
         },
         Tab3: 
@@ -72,6 +81,8 @@ const TabsMainScreen = createBottomTabNavigator(
         }
     }, 
     {
+        initialRouteName: 'Tab5',
+        order: ['Tab5', 'Tab4', 'Tab3', 'Tab2', 'Tab1'],
         lazy: true,
         tabBarOptions: 
         {
@@ -80,7 +91,16 @@ const TabsMainScreen = createBottomTabNavigator(
             activeBackgroundColor: 'yellow',
             inactiveTintColor: 'white',
             inactiveBackgroundColor: 'purple',
-            upperCaseLabel: false
+            //upperCaseLabel: true,
+            safeAreaInset: { bottom: 'always', top: 'never' },
+            labelStyle: {
+                //fontSize: 30,
+                color: 'red'
+            },
+            tabStyle: {
+                padding: 3,
+                backgroundColor: 'gray'
+            }
         }
     });
 
